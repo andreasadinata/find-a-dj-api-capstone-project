@@ -1,9 +1,9 @@
 #Spotify - Find related tracks by artist
 Thinkful (https://www.thinkful.com/) first portofolio project. Using Spotify's API to find selected artist's preview songs.
 
-![Screenshots](http://jonwade.digital/github-images/home-page-screenshot.png)
+![home-page](https://andreasadinata.github.io/find-a-dj-api-capstone-project/home-page-screenshot.png)
 
-![Screenshots](http://jonwade.digital/github-images/result-screenshot.png)
+![results-page](https://andreasadinata.github.io/find-a-dj-api-capstone-project/result-screenshot.png)
 
 ##Introduction
 Find DJ's will show the user the top DJs which has been performed well for the past a week. The update will be based on the EDM Magazine and
@@ -17,7 +17,7 @@ The easy features will not only help the DJs and Producers. People who just want
 Moreover, the website can also help the rising stars producers to be recognised and appreciated by the community, since the selections of the producer will have no boundaries.
 
 ##Live Site
-You can access Find DJs at [address of the github]
+You can access Find DJs at https://andreasadinata.github.io/find-a-dj-api-capstone-project
 
 ##Technical
 * The app is built by HTML5, JS, CSS, and JQUery.
@@ -26,4 +26,6 @@ You can access Find DJs at [address of the github]
 * The database of the songs will be based on the spotify available songs at current region.
 
 ##Road Map
-How do you plan to improve the app in the future?
+The app will have an automatic update on the database, instead of depending on the developer to update the DJs list manually.
+Furthermore, in the future, the app will not only depending on the 1 API's only as their main source. There are plenty music streaming APIs
+in the current market, and hopefully we can add more variaties in the app.
