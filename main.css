@@ -1,0 +1,98 @@
+* {
+    box-sizing: border-box;
+    font-family: Audiowide;
+}
+
+body {
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://www.walldevil.com/wallpapers/a76/cube-glow.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.js-heading {
+    text-align: center;
+    display: none;
+}
+
+.js-content {
+    text-align: center;
+}
+
+.js-dj {
+    list-style: none;
+    display: inline-block;
+    text-align: center;
+    width: 30%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 400px;
+    margin: 10px;
+    vertical-align: top;
+    font-size: 0.5px;
+    border: 2px solid black;
+}
+
+.js-dj span {
+    padding-top: 200px;
+    display: block;
+}
+
+.js-dj:hover {
+    opacity: 0.9;
+    color: white;
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+.audien {
+    background-image: url('https://www.festivalsherpa.com/wp-content/uploads/2014/08/audien-cover-1.jpg');
+}
+
+.zedd {
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4)), url('http://static1.1.sqspcdn.com/static/f/1380808/20404053/1348522591070/ezoo-zedd.jpg?token=VUdLiyjAOOdbPzq61LF9NYnfbo');
+}
+
+.theChainsmokers {
+    background-image: url('https://d3us2i0tqwa7m7.cloudfront.net/channel-banners/543ec3f9c40d78e40a000088/1413399695062_res_1600xundefined.jpg?v=1413399695062');
+}
+
+.porterRobinson {
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4)), url('https://s-media-cache-ak0.pinimg.com/originals/37/27/5f/37275feaca89f8cbba4e8221b57ec3c7.jpg');
+}
+
+.madeon {
+    background-image: url('http://www.edmtunes.com/wp-content/uploads/2015/12/Screen-Shot-2015-04-28-at-12.00.54-PM_zpsvhbeeiis.png');
+}
+
+.marshmello {
+    background-image: url('http://www.billboard.com/files/media/Marshmello-2016-Bellnjerry-billboard-1548-650-2.jpg');
+}
+
+.js-result {
+    text-align: center;
+}
+
+.js-result ul {
+    padding: 1%;
+    width: 98%;
+}
+
+.list {
+    list-style: none;
+    display: inline-block;
+    width: 30%;
+    text-align: center;
+    padding: 2%;
+    margin-top: 40px;
+}
+
+.images {
+    width: 100%;
+}
+
+.title {
+    font-weight: bolder;
+    color: ghostwhite;
+}
