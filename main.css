@@ -18,6 +18,11 @@ body {
     margin-top: 40px;
 }
 
+.js-introduction {
+    color: white;
+    text-align: center;
+}
+
 .js-content {
     margin-top: 50px;
     margin-bottom: 0px;
@@ -87,13 +92,33 @@ body {
     width: 98%;
 }
 
-.list {
+.js-result h3 {
+    color: white;
+    font-size: 30px;
+}
+
+.js-result .list {
+    position: relative;
     list-style: none;
     display: inline-block;
     width: 30%;
     text-align: center;
     padding: 2%;
     margin-top: 10px;
+}
+
+.js-result .list span {
+    position: absolute;
+    top: 48.7%;
+    right: 46.8%;
+    color: white;
+    font-size: 40px;
+}
+
+.js-result .list:hover span {
+    top: 44%;
+    right: 43.5%;
+    font-size: 80px;
 }
 
 .images {
@@ -179,7 +204,7 @@ body {
     .js-dj {
         width: 100%;
     }
-    .list {
-        width: 70%;
+    .js-result .list {
+        width: 80%;
     }
 }

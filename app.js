@@ -8,13 +8,16 @@ $(document).ready(function () {
         $('.js-result').show();
         $('.js-content').hide();
         $('#js-back').show();
+        $('.js-introduction').hide();
+        $('.js-heading').hide();
     });
 
     $('#js-back').click(function () {
         $('.js-result').hide();
         $('#js-back').hide();
         $('.js-content').show();
-
+        $('.js-introduction').show();
+        $('.js-heading').show();
     });
 
 });
@@ -39,7 +42,7 @@ function getArtistIdByAtristName(artistName) {
             /* if the results are meeningful, we can just console.log them */
 
             var artistID = result.artists.items[0].id;
-            getRelatedTracksByArtistID(artistID);
+            getRelatedTracksByArtistID(artistID, artistName);
         })
         /* if the call is NOT successful show errors */
         .fail(function (jqXHR, error, errorThrown) {
@@ -50,7 +53,7 @@ function getArtistIdByAtristName(artistName) {
 
 }
 
-function getRelatedTracksByArtistID(artistID) {
+function getRelatedTracksByArtistID(artistID, artistName) {
 
     /* Update all the parameters for your API test*/
     var result = $.ajax({
@@ -63,7 +66,7 @@ function getRelatedTracksByArtistID(artistID) {
         /* if the call is successful (status 200 OK) show results */
         .done(function (result) {
             /* if the results are meeningful, we can just console.log them */
-            displaySearchResults(result);
+            displaySearchResults(result, artistName);
         })
         /* if the call is NOT successful show errors */
         .fail(function (jqXHR, error, errorThrown) {
@@ -74,9 +77,10 @@ function getRelatedTracksByArtistID(artistID) {
 
 }
 
-function displaySearchResults(relatedTracks) {
+function displaySearchResults(relatedTracks, artistName) {
     //create an empty variable to store one LI for each one the results
     var buildTheHtmlOutput = "";
+    buildTheHtmlOutput += "<h3>" + artistName + "'s sample tracks</h3>";
 
     $.each(relatedTracks.tracks, function (relatedTracksKey, relatedTracksValue) {
         if (relatedTracksKey < 9) {
@@ -84,6 +88,7 @@ function displaySearchResults(relatedTracks) {
             buildTheHtmlOutput += "<li class= list>";
             buildTheHtmlOutput += "<p class=title>" + relatedTracksValue.name + "</p>"; //output vide title
             buildTheHtmlOutput += "<a class=preview href='" + relatedTracksValue.preview_url + "'control'>"; //taget blank is going to open the video in a new window
+            buildTheHtmlOutput += "<span><i class='fa fa-play-circle' aria-hidden='true'></i></span>"; //display video's thumbnail
             buildTheHtmlOutput += "<img class=images src='" + relatedTracksValue.album.images[0].url + "'/>"; //display video's thumbnail
             buildTheHtmlOutput += "</a>";
             buildTheHtmlOutput += "</li>";
