@@ -109,15 +109,15 @@ body {
 
 .js-result .list span {
     position: absolute;
-    top: 48.7%;
-    right: 46.8%;
+    top: 49%;
+    right: 46.5%;
     color: white;
     font-size: 40px;
 }
 
 .js-result .list:hover span {
-    top: 44%;
-    right: 43.5%;
+    top: 44.5%;
+    right: 43%;
     font-size: 80px;
 }
 

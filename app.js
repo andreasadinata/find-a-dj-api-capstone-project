@@ -85,10 +85,12 @@ function displaySearchResults(relatedTracks, artistName) {
     $.each(relatedTracks.tracks, function (relatedTracksKey, relatedTracksValue) {
         if (relatedTracksKey < 9) {
             //create and populate one LI for each of the results ( "+=" means concatenate to the previous one)
-            buildTheHtmlOutput += "<li class= list>";
-            buildTheHtmlOutput += "<p class=title>" + relatedTracksValue.name + "</p>"; //output vide title
-            buildTheHtmlOutput += "<a class=preview href='" + relatedTracksValue.preview_url + "'control'>"; //taget blank is going to open the video in a new window
-            buildTheHtmlOutput += "<span><i class='fa fa-play-circle' aria-hidden='true'></i></span>"; //display video's thumbnail
+            buildTheHtmlOutput += "<li class='list'>";
+            buildTheHtmlOutput += "<p class='title'>" + relatedTracksValue.name + "</p>"; //output vide title
+            //buildTheHtmlOutput += "<iframe src='" + relatedTracksValue.preview_url + "'></iframe>";
+            buildTheHtmlOutput += "<a class='preview' onClick='playTrack(" + relatedTracksKey + ")'>"; //taget blank is going to open the video in a new window
+            buildTheHtmlOutput += "<audio class='playMe" + relatedTracksKey + "' src='" + relatedTracksValue.preview_url + "'></audio>";
+            buildTheHtmlOutput += "<span class='playButton" + relatedTracksKey + "'><i class='fa fa-play-circle' aria-hidden='true'></i></span>"; //display video's thumbnail
             buildTheHtmlOutput += "<img class=images src='" + relatedTracksValue.album.images[0].url + "'/>"; //display video's thumbnail
             buildTheHtmlOutput += "</a>";
             buildTheHtmlOutput += "</li>";
@@ -99,6 +101,22 @@ function displaySearchResults(relatedTracks, artistName) {
     $(".js-result ul").html(buildTheHtmlOutput);
 }
 
+var playTrackFlag = false;
+
+function playTrack(trackNumber) {
+    playTrackFlag = !playTrackFlag;
+
+    console.log("ready to play");
+    if (playTrackFlag) {
+        //    $(this).parent().closest("audio")[0].volume = 0.5;
+        //    $(this).parent().closest("audio")[0].load();
+        $(".playButton" + trackNumber + " i").attr('class', 'fa fa-pause-circle-o');
+        $(".playMe" + trackNumber)[0].play();
+    } else {
+        $(".playButton" + trackNumber + " i").attr('class', 'fa fa-play-circle');
+        $(".playMe" + trackNumber)[0].pause();
+    }
+}
 
 // Get the modal
 var modal = document.getElementById('myModal');
